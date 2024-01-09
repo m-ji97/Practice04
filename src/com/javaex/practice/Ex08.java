@@ -6,11 +6,19 @@ public class Ex08 {
 		
 		int[] no = new int[6];
 		
-		for(int i=0; i<no.length; i++) {
-			no[i] = (int)(Math.random()*45)+1;	
+		for(int i =0; i<no.length; i++) {
+			no[i] = (int)(Math.random()*45)+1;
+			
+			for(int j=0;j<i; j++) {
+				if(no[i]==no[j]) {
+					--i;
+					break;
+				}
+			}
 		}
 		
-		System.out.println(no[i]);
+		for(int j=0; j<no.length; j++) {
+			System.out.println(no[j]+" ");
+		}
 	}
-
 }
